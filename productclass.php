@@ -1,58 +1,45 @@
 <?php
-    class Product{
-        protected $sku;
-        protected $name;
-        protected $price;
 
-        public function __construct($Psku,$Pname,$Pprice){
-            $this->sku = $Psku;
-            $this->name = $Pname;
-            $this->price = $Pprice;
+    // Abstract product class 
+    abstract class Product{
+        protected $data;
+
+        public function __construct($post_data){
+            $this->data = $post_data;
         }
 
         public function getProduct(){
-            $productInfo =  $this->sku ." ". $this->name." ".$this->price;
-            return $productInfo;
+            return $this->data;
         }
 
-        public function setProduct($Psku,$Pname,$Pprice){
-            $this->sku = $Psku;
-            $this->name = $Pname;
-            $this->price = $Pprice;
-        }
-
-    }
-
-    class DVD extends Product {
-        private $size;
-
-        public function __construct($Psku,$Pname,$Pprice,$size){
-            $this->size = $size;
-            parent::__construct($Psku,$Pname,$Pprice);
+        public function setProduct($sku, $name, $price, $productType, $typeAttribute){
+            $this->data["sku"] = $sku;
+            $this->data["name"] = $name;
+            $this->data["price"] = $price;
+            $this->data["productType"] = $productType;
+            $this->data["typeAttribute"] = $typeAttribute;
         }
     }
+    // classes for other types
+    // class DVD extends Product {
 
-    class Book extends Product{
-        private $weight;
+    // }
 
-        public function __construct($Psku,$Pname,$Pprice,$weight){
-            $this->weight = $weight;
-            parent::__construct($Psku,$Pname,$Pprice);
-        }
-    }
+    // class Book extends Product{
+
+    // }
 
     class Furniture extends Product{
-        private $height;
-        private $lenght;
-        private $width;
         private $dimensions;
-
-        public function __construct($Psku,$Pname,$Pprice,$height,$lenght,$width){
-            $this->height = $height;
-            $this->width = $width;
-            $this->lenght = $lenght;
+        public function __construct($post_data){
+            parent::__construct($post_data);
+            $this->dimensions = $post_data["height"]."X".$post_data["width"]."X".$post_data["lenght"];
+            $this->data["typeAttribute"] = $this->dimensions;
+            
+        }
+        public function setProduct($sku, $name, $price, $productType, $height, $lenght, $width){
             $this->dimensions = $height."X".$width."X".$lenght;
-            parent::__construct($Psku,$Pname,$Pprice);
+            parent::setProduct($sku, $name, $price, $productType,$this->dimensions);
         }
 
     }

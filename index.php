@@ -38,15 +38,10 @@
 </div>
 <?php 
   if(isset($_POST['submit'])){
+    // Create new product
+    $product = new Product($_POST);
 
-    //extract values from the $_POST array
-    $sku = $_POST['sku'];
-    $name = $_POST['name'];
-    $price = $_POST['price'];
-
-    $product = new Product($sku,$name,$price);
-
-    echo $product->getProduct();
+    $product->getProduct();
 
   }
 ?>

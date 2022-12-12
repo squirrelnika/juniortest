@@ -36,9 +36,9 @@
       <div class="col-auto">
         <select name="productType" id="productType" class="form-select" required>
           <option selected>Type Switcher</option>
-          <option value="DVD" id="DVD">DVD</option>
-          <option value="Furniture" id="Furniture">Furniture</option>
-          <option value="Book" id="Book">Book</option>
+          <option value="DVD">DVD</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Book">Book</option>
         </select>
       </div>
     </div>
@@ -46,7 +46,7 @@
       <p>Please provide DVD size in MB</p>
       <div class="row">
         <div class="col-auto"> <label for="size" class="form-label">Size (MB)</label> </div>
-        <div class="col-auto"> <input class="form-control" type="text" name="DVDsize" id="size"> </div> 
+        <div class="col-auto"> <input class="form-control" type="text" name="typeAttribute" id="size"> </div> 
       </div>
     </div>
     <div id="furnitureDescription" class="my-2">
@@ -65,10 +65,10 @@
       </div>
     </div>
     <div id="bookDescription" class="my-2">
-      <p>Please provide DVD size in MB</p>
+      <p>Please provide Books weight in kg</p>
       <div class="row">
-        <div class="col-auto"> <label for="size" class="form-label">Size (MB)</label> </div>
-        <div class="col-auto"> <input class="form-control" type="text" name="DVDsize" id="size"> </div> 
+        <div class="col-auto"> <label for="size" class="form-label">Weight (kg)</label> </div>
+        <div class="col-auto"> <input class="form-control" type="text" name="typeAttribute" id="weight"> </div> 
       </div>
     </div>
    
