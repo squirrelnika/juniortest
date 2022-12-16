@@ -18,7 +18,7 @@
 </nav>
 
 <form class="row g-3 align-items-center ms-2" action="index.php" method="post" id="product_form">
-  <div class="col-auto">
+  <div class="col-4">
     <div class="row my-2">
       <div class="col-3"><label for="sku" class="form-label">SKU</label></div>
       <div class="col-9"><input class="form-control" type="text" name="sku" id="sku" pattern="^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z\d]{9}$" required></div>
@@ -42,33 +42,33 @@
         </select>
       </div>
     </div>
-    <div id="DVDdescription" class="my-2">
+    <div id="DVD" class="my-2 hide">
       <p>Please provide DVD size in MB</p>
       <div class="row">
-        <div class="col-auto"> <label for="size" class="form-label">Size (MB)</label> </div>
-        <div class="col-auto"> <input class="form-control" type="text" name="typeAttribute" id="size"> </div> 
+        <div class="col-3"> <label for="size" class="form-label">Size (MB)</label> </div>
+        <div class="col-9"> <input class="form-control" type="text" name="typeAttribute" id="size"> </div> 
       </div>
     </div>
-    <div id="furnitureDescription" class="my-2">
+    <div id="Furniture" class="my-2 hide">
       <p>Please provide Furniture dimensions in cm</p>
       <div class="row my-2">
-        <div class="col-auto"> <label for="height" class="form-label">Height (cm)</label> </div>
-        <div class="col-auto"> <input class="form-control" type="text" name="FurnitureHeight" id="height"> </div> 
+        <div class="col-3"> <label for="height" class="form-label">Height (cm)</label> </div>
+        <div class="col-9"> <input class="form-control" type="text" name="FurnitureHeight" id="height"> </div> 
       </div>
       <div class="row my-2">
-        <div class="col-auto"> <label for="width" class="form-label">Width (cm)</label> </div>
-        <div class="col-auto"> <input class="form-control" type="text" name="FurnitureWidth" id="width"> </div> 
+        <div class="col-3"> <label for="width" class="form-label">Width (cm)</label> </div>
+        <div class="col-9"> <input class="form-control" type="text" name="FurnitureWidth" id="width"> </div> 
       </div>
       <div class="row my-2">
-        <div class="col-auto"> <label for="lenght" class="form-label">Lenght (cm)</label> </div>
-        <div class="col-auto"> <input class="form-control" type="text" name="FurnitureLenght" id="lenght"> </div> 
+        <div class="col-3"> <label for="lenght" class="form-label">Lenght (cm)</label> </div>
+        <div class="col-9"> <input class="form-control" type="text" name="FurnitureLenght" id="lenght"> </div> 
       </div>
     </div>
-    <div id="bookDescription" class="my-2">
+    <div id="Book" class="my-2 hide">
       <p>Please provide Books weight in kg</p>
       <div class="row">
-        <div class="col-auto"> <label for="size" class="form-label">Weight (kg)</label> </div>
-        <div class="col-auto"> <input class="form-control" type="text" name="typeAttribute" id="weight"> </div> 
+        <div class="col-3"> <label for="size" class="form-label">Weight (kg)</label> </div>
+        <div class="col-9"> <input class="form-control" type="text" name="typeAttribute" id="weight"> </div> 
       </div>
     </div>
    

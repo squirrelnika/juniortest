@@ -1,13 +1,14 @@
 <?php
 
     // Abstract product class 
-    abstract class Product{
+    class Product{
         protected $data;
 
         public function __construct($post_data){
             $this->data = $post_data;
         }
 
+        // change get and set, to choose which property to change
         public function getProduct(){
             return $this->data;
         }
@@ -37,10 +38,10 @@
             $this->data["typeAttribute"] = $this->dimensions;
             
         }
-        public function setProduct($sku, $name, $price, $productType, $height, $lenght, $width){
-            $this->dimensions = $height."X".$width."X".$lenght;
-            parent::setProduct($sku, $name, $price, $productType,$this->dimensions);
-        }
+        // public function setProduct($sku, $name, $price, $productType, $height, $lenght, $width){
+        //     $this->dimensions = $height."X".$width."X".$lenght;
+        //     parent::setProduct($sku, $name, $price, $productType,$this->dimensions);
+        // }
 
     }
 

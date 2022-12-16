@@ -36,14 +36,5 @@
     </div>
   </div>
 </div>
-<?php 
-  if(isset($_POST['submit'])){
-    // Create new product
-    $product = new Product($_POST);
-
-    $product->getProduct();
-
-  }
-?>
 
 <?php require_once 'partials/footer.php'; ?>
