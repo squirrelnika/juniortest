@@ -1,7 +1,9 @@
-$('.hide').hide()
+$('.hide').hide();
 
 $('#productType').change(function () {
-	  var value = this.value;
-    $('.hide').hide()
+    $('.hide').hide();
     $('#' + this.value).show();
+    $('.hide input').attr('disabled','disabled');
+    $('#' + this.value + ' input').removeAttr('disabled');
+
 });

@@ -8,18 +8,18 @@
         function __construct($conn){
             $this->db = $conn;
         }
-        public function insertProduct($sku, $name, $price, $productType, $typeAttribute){
+        public function insertProduct($data){
             try {
                 // define sql statement to be executed
                 $sql = "INSERT INTO products (sku, name, price, type, typeAttribute) VALUES (:sku,:productname,:price,:productType,:typeAttribute)";
                 //prepare the sql statement for execution
                 $stmt = $this->db->prepare($sql);
                 // bind all placeholders to the actual values
-                $stmt->bindparam(':sku',$sku);
-                $stmt->bindparam(':productname',$name);
-                $stmt->bindparam(':price',$price);
-                $stmt->bindparam(':productType',$productType);
-                $stmt->bindparam(':typeAttribute',$typeAttribute);
+                $stmt->bindparam(':sku',$data['sku']);
+                $stmt->bindparam(':productname',$data['name']);
+                $stmt->bindparam(':price',$data['price']);
+                $stmt->bindparam(':productType',$data['productType']);
+                $stmt->bindparam(':typeAttribute',$data['typeAttribute']);
 
 
                 // execute statement
@@ -30,6 +30,18 @@
                 echo $e->getMessage();
                 return false;
             }
+        }
+
+        public function getProducts(){
+            try{
+                $sql = "SELECT * FROM products";
+                $result = $this->db->query($sql);
+                return $result;
+            }catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+           }
+           
         }
     }
 
