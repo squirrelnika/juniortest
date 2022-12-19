@@ -10,9 +10,8 @@
         <p class="navbar-brand">Product Add</p>
       </div>
       <div>
-        <a href="index.php">HOME</a>
         <button type="submit" form="product_form" class="btn btn-outline-info" name="submit">Save</button>
-        <button type="button" class="btn btn-outline-info">Cancel</button>     
+        <a href="index.php"><button type="button" class="btn btn-outline-info">Cancel</button></a>   
       </div>
     </div>
 </nav>
