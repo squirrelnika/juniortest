@@ -21,7 +21,7 @@
     <div>
       <a href="index.php">HOME</a>
       <a href="addproduct.php">ADD</a>
-      <a href="index.php">MASS DELETE</a>
+      <a href="index.php" id="delete-product-btn">MASS DELETE</a>
     </div>
   </div>
 </nav>
@@ -34,7 +34,7 @@
     <div class="col-sm-3 my-2">
       <div class="card">
         <div class="card-body">
-          <input class="form-check-input mt-0 delete-checkbox" type="checkbox">
+          <input class="form-check-input mt-0 delete-checkbox" type="checkbox" value="<?php echo $r['sku'] ?>">
           <div class="text-center">
             <h5 class="card-title"><?php echo $r['sku'] ?></h5>
             <p class="card-text"><?php echo $r['name'] ?></p>

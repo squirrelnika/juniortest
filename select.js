@@ -7,3 +7,11 @@ $('#productType').change(function () {
     $('#' + this.value + ' input').removeAttr('disabled');
 
 });
+
+
+function removeCheckedCheckboxes() {
+    var checked = document.querySelectorAll(".delete-checkbox:checked");
+    checked.forEach((elem) => {
+      elem.parentElement.style.display = "none";
+    })
+}

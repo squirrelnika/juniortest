@@ -43,6 +43,18 @@
            }
            
         }
+        public function deleteProduct($sku){
+            try{
+                 $sql = "delete from products where sku = :sku";
+                 $stmt = $this->db->prepare($sql);
+                 $stmt->bindparam(':sku', $sku);
+                 $stmt->execute();
+                 return true;
+             }catch (PDOException $e) {
+                 echo $e->getMessage();
+                 return false;
+             }
+         }
     }
 
 ?>
