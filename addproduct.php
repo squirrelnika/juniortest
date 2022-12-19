@@ -25,11 +25,11 @@
     </div>
     <div class="row my-2">
       <div class="col-3"><label for="name" class="form-label">Name</label></div>
-      <div class="col-9"><input class="form-control" type="text" name="name" id="name" pattern="^[a-zA-Z\s]*$" required></div>
+      <div class="col-9"><input class="form-control" type="text" name="name" id="name" pattern="^[a-zA-Z\s\d]*$" required></div>
     </div>
     <div class="row my-2">
       <div class="col-3"><label for="price" class="form-label">Price ($)</label></div>
-      <div class="col-9"><input class="form-control" type="text" name="price" id="price" pattern="^\d+(,\d{1,2})?$" required></div>
+      <div class="col-9"><input class="form-control" type="text" name="price" id="price" pattern="^\d+(\.\d{1,2})?$" required></div>
     </div>
     <div class="row my-2">
       <div class="col-auto"><label for="productType" class="form-label">Type Switcher</label></div>
@@ -75,15 +75,5 @@
   </div>
   
 </form>
-
-
-
-
-
-
-
-
-
-
 
 <?php require_once 'partials/footer.php'; ?>
