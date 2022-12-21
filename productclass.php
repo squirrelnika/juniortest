@@ -56,7 +56,7 @@
         private $dimensions;
         public function __construct($post_data){
             parent::__construct($post_data);
-            $this->dimensions = $post_data["height"]."X".$post_data["width"]."X".$post_data["lenght"];
+            $this->dimensions = $post_data["height"]."X".$post_data["width"]."X".$post_data["length"];
             $this->data["typeAttribute"] = parent::test_input("Dimensions: ". $this->dimensions."cm");
             
         }

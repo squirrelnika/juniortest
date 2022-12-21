@@ -60,7 +60,7 @@
       </div>
       <div class="row my-2">
         <div class="col-3"> <label for="lenght" class="form-label">Lenght (cm)</label> </div>
-        <div class="col-9"> <input class="form-control" type="text" name="lenght" id="lenght" pattern="(\d){1,5}" required> </div> 
+        <div class="col-9"> <input class="form-control" type="text" name="length" id="length" pattern="(\d){1,5}" required> </div> 
       </div>
     </div>
     <div id="Book" class="my-2 hide">
