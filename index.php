@@ -3,7 +3,6 @@
   require_once 'partials/header.php';
   require_once 'db/conn.php';
   require_once 'productclass.php';
-  require_once 'fetchproducts.php';
 
   if(isset($_POST["submit"]) && isset($_POST["name"])){
     $productClass = $_POST['productType'];
@@ -17,7 +16,7 @@
     }
   }
 
-  $results = $crud->getProducts();
+  require_once 'fetchproducts.php';
 ?>
 
 <nav class="navbar navbar-default bg-light">
