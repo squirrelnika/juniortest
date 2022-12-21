@@ -38,16 +38,23 @@
     class DVD extends Product {
         public function __construct($post_data){
             parent::__construct($post_data);
-            $this->data["typeAttribute"] = parent::test_input( "Size: ". $post_data["size"] . "MB");
+            if(array_key_exists("typeAttribute",$post_data)){
+                $this->data["typeAttribute"] = $post_data["typeAttribute"];
+            }else{
+                $this->data["typeAttribute"] = parent::test_input( "Size: ". $post_data["size"] . "MB");
+            }
         }
-
     }
 
     // Product child class for Book
     class Book extends Product{
         public function __construct($post_data){
             parent::__construct($post_data);
-            $this->data["typeAttribute"] = parent::test_input("Weight: ". $post_data["weight"]."KG");
+            if(array_key_exists("typeAttribute",$post_data)){
+                $this->data["typeAttribute"] = $post_data["typeAttribute"];
+            } else {
+                $this->data["typeAttribute"] = parent::test_input("Weight: " . $post_data["weight"] . "KG");
+            }
         }
     }
 
@@ -56,14 +63,14 @@
         private $dimensions;
         public function __construct($post_data){
             parent::__construct($post_data);
-            $this->dimensions = $post_data["height"]."X".$post_data["width"]."X".$post_data["length"];
-            $this->data["typeAttribute"] = parent::test_input("Dimensions: ". $this->dimensions."cm");
+            if(array_key_exists("typeAttribute",$post_data)){
+                $this->data["typeAttribute"] = $post_data["typeAttribute"];
+        } else {
+            $this->dimensions = $post_data["height"] . "X" . $post_data["width"] . "X" . $post_data["length"];
+            $this->data["typeAttribute"] = parent::test_input("Dimensions: " . $this->dimensions . "cm");
+        }
             
         }
-        // public function setProduct($sku, $name, $price, $productType, $height, $lenght, $width){
-        //     $this->dimensions = parent::test_input($height."X".$width."X".$lenght);
-        //     parent::setProduct($sku, $name, $price, $productType,$this->dimensions);
-        // }
 
     }
 
