@@ -42,7 +42,7 @@
       <div class="col-sm-3 my-2">
         <div class="card">
           <div class="card-body">
-            <input class="form-check-input mt-0 delete-checkbox" type="checkbox" name="delete[]" value="<?php echo $r['sku'] ?>">
+            <input class="form-check-input mt-0 delete-checkbox" type="checkbox" name="delete[]" value="<?php echo $p['sku'] ?>">
             <div class="text-center">
               <h5 class="card-title"><?php echo $p['sku'] ?></h5>
               <p class="card-text"><?php echo $p['name'] ?></p>
