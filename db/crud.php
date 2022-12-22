@@ -11,7 +11,7 @@
         public function insertProduct($data){
             try {
                 // define sql statement to be executed
-                $sql = "INSERT INTO products (sku, name, price, type, typeAttribute) VALUES (:sku,:productname,:price,:productType,:typeAttribute)";
+                $sql = "INSERT INTO products (sku, name, price, productType, typeAttribute) VALUES (:sku,:productname,:price,:productType,:typeAttribute)";
                 //prepare the sql statement for execution
                 $stmt = $this->db->prepare($sql);
                 // bind all placeholders to the actual values
