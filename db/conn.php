@@ -1,16 +1,15 @@
 <?php 
     // Development Connection
-    $host = '127.0.0.1';
-    $db = 'junior_test';
-    $user = 'root';
-    $pass = '';
-    // $charset = 'utf8mb4';
+    // $host = '127.0.0.1';
+    // $db = 'junior_test';
+    // $user = 'root';
+    // $pass = '';
 
     // Hosting connection
-    // $host = 'localhost';
-    // $db = 'id19963475_junior_test';
-    // $user = 'id19963475_nikavevere';
-    // $pass = 'vL2yG!5U_ivBzIOB';
+    $host = 'localhost';
+    $db = 'id19963475_junior_test';
+    $user = 'id19963475_nikavevere';
+    $pass = 'vL2yG!5U_ivBzIOB';
 
 
 

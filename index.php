@@ -10,11 +10,11 @@
     $crud->insertProduct($product->getProduct());
   }
 
-  // if(isset($_POST["submit"]) && isset($_POST["delete"])){
-  //   foreach($_POST["delete"] as $prod){
-  //     $crud->deleteProduct($prod);
-  //   }
-  // }
+  if(isset($_POST["submit"]) && isset($_POST["delete"])){
+    foreach($_POST["delete"] as $prod){
+      $crud->deleteProduct($prod);
+    }
+  }
 
   require_once 'fetchproducts.php';
 ?>
@@ -37,13 +37,14 @@
     <?php foreach($productList as $product) {
       $p = $product->getProduct();  
     ?>
+
+      
       <div class="col-sm-3 my-2">
         <div class="card">
           <div class="card-body">
             <input class="form-check-input mt-0 delete-checkbox" type="checkbox" name="delete[]" value="<?php echo $p['sku'] ?>">
             <div class="text-center">
               <h5 class="card-title"><?php echo $p['sku'] ?></h5>
-              <h6 class="card-subtitle"><?php echo $p['productType'] ?></h6>
               <p class="card-text"><?php echo $p['name'] ?></p>
               <p class="card-text"><?php echo number_format($p['price'],2) ?> $</p>
               <p class="card-text"><?php echo $p['typeAttribute'] ?></p>
